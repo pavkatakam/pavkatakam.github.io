@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pavani Katakam — UX Designer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">PAVANI KATAKAM</a>
+      <nav class="nav-links">
+        <a href="#projects">Work</a>
+        <a href="#about">About</a>
+        <a href="resume.pdf" target="_blank" class="nav-btn">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="greeting">Hi, I'm Pavani 👋</h1>
+        <p class="role-title">UX/UI Designer & Cognitive Science Student</p>
+        <p class="tagline">
+          Connecting intuitive human-centered design to AI algorithms and machine learning frameworks.
+        </p>
+        <div class="education-badge">
+          <span>EDUCATION</span>
+          <p>B.S. in Cognitive Science (Machine Learning & Neural Computation) @ UC San Diego</p>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://framerusercontent.com/images/66wwoJeqeEP10S1OqXOuPpyUIp8.jpeg" alt="Pavani Katakam Profile" />
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <div class="section-header">
+        <h2>CASE STUDIES & PROJECTS</h2>
+        <div class="filter-pills">
+          <button class="pill active" onclick="filterProjects('all')">All</button>
+          <button class="pill" onclick="filterProjects('ux')">UX Design</button>
+          <button class="pill" onclick="filterProjects('ml')">Machine Learning</button>
+        </div>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card ux">
+          <div class="card-image">
+            <img src="https://framerusercontent.com/images/0aLyEDqyOQF8smyqLqA2FdUY.png" alt="COGS 127 Project" />
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3>Human-Computer Interaction (COGS 127)</h3>
+              <span class="year">2026</span>
+            </div>
+            <div class="tags">
+              <span class="tag">UX/UI Design</span>
+              <span class="tag">Prototyping</span>
+              <span class="tag">Case Study</span>
+            </div>
+            <p class="card-desc">
+              An interactive web application designed with a focus on accessible user interaction and seamless workflow patterns.
+            </p>
+            <a href="#" class="project-link">View Case Study &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card ml">
+          <div class="card-image">
+            <img src="https://framerusercontent.com/images/BYkMpq2yD7Mln6ugGjOV5vnSzxI.png" alt="COGS 180 Project" />
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3>Neural Networks & Deep Learning (COGS 180)</h3>
+              <span class="year">2025</span>
+            </div>
+            <div class="tags">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Python</span>
+              <span class="tag">AI</span>
+            </div>
+            <p class="card-desc">
+              Exploring neural computing models and algorithmic visualization for complex cognitive processing tasks.
+            </p>
+            <a href="#" class="project-link">View Project &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card ml">
+          <div class="card-image">
+            <img src="https://framerusercontent.com/images/9iDobB73ywDWkQzBAGB6OXCus.png" alt="COGS 108 Project" />
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3>Data Science in Practice (COGS 108)</h3>
+              <span class="year">2025</span>
+            </div>
+            <div class="tags">
+              <span class="tag">Data Analysis</span>
+              <span class="tag">Python</span>
+              <span class="tag">Research</span>
+            </div>
+            <p class="card-desc">
+              End-to-end data analysis pipeline evaluating behavioral patterns and user interaction metrics.
+            </p>
+            <a href="#" class="project-link">View Project &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <h2>About & Experience</h2>
+      <p class="about-bio">
+        Hello! I'm Pavani, a Cognitive Science student specialized in machine learning and neural computation. I blend user research and data-driven insights to build intuitive digital interfaces.
+      </p>
+
+      <div class="skills-wrapper">
+        <h3>Skills & Tools</h3>
+        <div class="skills-tags">
+          <span>Figma</span>
+          <span>Adobe Photoshop</span>
+          <span>Adobe Lightroom</span>
+          <span>HTML/CSS</span>
+          <span>JavaScript</span>
+          <span>Python</span>
+          <span>Final Cut Pro</span>
+          <span>Canva</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <h3>Thank you for viewing!</h3>
+      <p>Available for UX/UI Design and Data Analysis opportunities.</p>
+      <div class="social-links">
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <a href="mailto:your-email@ucsd.edu">Email</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+      </div>
+      <p class="copyright">© 2026 Pavani Katakam. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple filter functionality for projects
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.pill');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

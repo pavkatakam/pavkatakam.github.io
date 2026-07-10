@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who Can Afford to Go Green in California? — Pavani Katakam</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation (Consistent with Home) -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">PAVANI KATAKAM</a>
+      <nav class="nav-links">
+        <a href="index.html#projects">Work</a>
+        <a href="index.html#about">About</a>
+        <a href="resume.pdf" target="_blank" class="nav-btn">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Back Button -->
+    <div class="back-link-wrapper">
+      <a href="index.html#projects" class="back-link">&larr; Back to Projects</a>
+    </div>
+
+    <!-- Case Study Hero -->
+    <header class="case-study-hero">
+      <span class="project-category">COGS 108 // DATA SCIENCE IN PRACTICE</span>
+      <h1 class="case-title">Who Can Afford to Go Green in California?</h1>
+    </header>
+
+    <!-- Project Overview Metrics Grid -->
+    <section class="project-meta-grid">
+      <div class="meta-item">
+        <h4>Role</h4>
+        <p>Data Analyst, Researcher, & Coder</p>
+      </div>
+      <div class="meta-item">
+        <h4>Timeline</h4>
+        <p>September 2025 - December 2025</p>
+      </div>
+      <div class="meta-item">
+        <h4>Teammates</h4>
+        <p>Christopher Arias and Zach Ishida</p>
+      </div>
+    </section>
+
+
+
+<section class="split-block">
+  <!-- Left Side: The Narrative Text -->
+  <div class="split-text">
+    <h2>01. BACKGROUND</h2>
+    <h3>AI Algorithms</h3>
+    <p>
+      Within the world of <b>image classification</b>, there are numerous AI algorithms being used to differentiate objects in digital images and classify them. 
+      Tools like <b>PCA, CLIP, and K-means</b> are very popular, all being used in our project today: <b>comparing left and right facing car images</b> to see if different AI algorithms can successfully differentiate between them. 
+    </p>
+    <h3>3 Comparisons</h3>
+    <p>
+      Overall, we are going to compare the results of <b>K-means clustering</b> when applied to different sets of features. 
+      We will use K-means <b>directly on the CLIP features</b> and K-means on the <b>PCA features using the optimal k (10).</b> 
+      We will also use K-means on the <b>first 2 principal components</b> to test how much information is lost by reduction.
+    </p>
+  </div>
+
+  <!-- Right Side: The Graphic Image -->
+  <div class="split-image">
+    <img src="cars.png" alt="Cars Graphic" />
+  </div>
+</section>
+
+    <section>
+      <div class="content-block">
+        <h2>02. METHODS</h2>
+        <h3>Dataset</h3>
+        <p>
+          We downloaded the <a href="https://deepvisualmarketing.github.io/" target="_blank" style="text-decoration: underline;">resized DVM file</a>, which has 84 different folders of different car brands (sorted by year and color) with images of the <b>cars facing different angles.</b> 
+          Using a random number generator, we chose 4 of them: <b>Ferrari, Lotus, McLaren, and Rolls-Royce.</b> 
+          This file also had an image table with image IDs, the predicted angle of the car in the image, and many more.
+        </p>
+        <br>
+        <h3>Code</h3>
+        <p>
+          From the <a href="https://drive.google.com/file/d/10DlqgTHuzOyEbdVXO-QDlEUfQKGKUBuy/view?usp=sharing" target="_blank" style="text-decoration: underline;">CLIP_THINGS code</a>, we ran the first 3 sections of code to use <b>CLIP embeddings.</b> 
+          After downloading the image_table.csv file, we cleaned the file to use the selected 4 brands and the left & right facing cars. 
+          The image table file had a unique image name for each image, so we had to make sure that each part of the image name was used when calling the images. 
+        </p>
+        <br>
+        <p>
+          After cleaning the dataset, we used <b>feature extraction</b> to convert all our car images into a format that PCA and K-means can understand. 
+          Since we are using K-means for our project, we also found the <b>ground-truth labels</b> for this algorithm and used PCA for <b>10 components and 2 components.</b>
+        </p>
+      </div>
+    </section>
+
+<section>
+  <!-- Left Column: Content and Quote -->
+  <div class="content-block">
+    <h2>03. DISCUSSION</h2>
+    <h3>Project Results: Accuracy Comparison</h3>
+        <ol style="list-style-type: circle; color: #6b7280; padding-left: 30px;">
+           <li>Accuracy (K-means on Full CLIP, D=1024): 68.94%</li>
+           <li>Accuracy (K-means on PCA Features, D=10): 68.94%</li>
+           <li>3. Accuracy (K-means on PCA Features, D=2): 68.94%</li>
+        </ol>
+    <br>
+        <p>
+          All of the <b>accuracies are the same</b>, meaning that a car's left or right direction is prominent to the model. 
+          Theoretically, this means that the left/right classes are captured <b>almost entirely by the very first few principal components.</b> 
+          However, all 3 of the algorithms having the same accuracy could also be a sign that our model didn’t work as well as we thought.
+        </p>
+
+    <br>
+    
+    <img src="clip.png" alt="K-means Clusters on 2D PCA Features" style="display: block; margin: 0 auto; max-width: 500px; width: 100%; height: auto;" />
+
+    <br>
+        <h3>K-means Clusters on 2D PCA Features</h3>
+        <p>
+          We noticed that the yellow and purple clusters represent the 2 different directions our dataset of car images were facing. 
+          Since the clusters are very separate, this shows that the left/right direction is <b>very strong</b> in the CLIP features. 
+          The accuracy of 68.94% is very high, but the scatter plot with <b>2 different purple clusters</b> shows where the 31.06% of errors occurred.
+        </p>
+</section>
+
+    <section>
+      <div class="content-block">
+        <h2>04. CONCLUSION</h2>
+        <h3>Findings</h3>
+        <p>
+          Overall, we learned that CLIP embeddings and feature extraction are <b>useful</b> when looking at visual features like a car angles. 
+          We also learned that PCA is useful at looking at CLIP features and analyzing the principal components. 
+          In addition, PCA also taught us that the <b>number of components used isn’t really important</b>, since 2 components and 10 components gave the same results. 
+        </p>
+        <br>
+        <h3>Expansion</h3>
+        <p>
+          In the future, we could have extended our project by <b>using the CLIP embeddings for text.</b> 
+          For this project, we only used the CLIP embeddings for images, but if we were able to use text, it could have improved the accuracy of our model.
+        </p>
+      </div>
+    </section> 
+  </main>
+
+  <!-- Footer (Consistent with Home) -->
+  <footer class="footer">
+    <div class="footer-container">
+      <h3>Let's Connect!</h3>
+      <p>Interested in collaborating on UX design or machine learning projects?</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/pavani-katakam/" target="_blank">LinkedIn</a>
+        <a href="mailto:pavkatakam@gmail.com">Email</a>
+      </div>
+      <p class="copyright">© 2026 Pavani Katakam. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

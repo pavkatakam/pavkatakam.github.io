@@ -558,3 +558,16 @@ a {
     width: 0;             /* Prevents images from distorting or breaking bounds */
   }
 }
+
+.chart-container {
+  max-width: 500px; /* Adjust this value to make it smaller or larger */
+  width: 100%;
+  margin: 2rem auto; /* Centers the chart box */
+  text-align: center;
+}
+
+.chart-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Keeps the nice rounded corners shown in your screenshot */
+}

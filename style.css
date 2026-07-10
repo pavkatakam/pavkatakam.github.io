@@ -529,3 +529,32 @@ a {
     width: 0;             /* Prevents images from pushing past container bounds */
   }
 }
+
+/* Container that places both images in a row */
+.image-duo {
+  display: flex;
+  flex-direction: column; /* Stacks vertically on small phone screens */
+  gap: 1.5rem;            /* Space between the two images */
+  width: 100%;
+  margin: 2.5rem 0;
+}
+
+/* Formats each image to scale proportionally */
+.image-duo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Desktop & Tablet View: Places both side-by-side */
+@media (min-width: 768px) {
+  .image-duo {
+    flex-direction: row;  /* Arranges images in a horizontal row */
+  }
+
+  .image-duo img {
+    flex: 1;              /* Gives each image an equal 50% width share */
+    width: 0;             /* Prevents images from distorting or breaking bounds */
+  }
+}

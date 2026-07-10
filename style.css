@@ -478,3 +478,24 @@ a {
     flex: 1;              /* Allocates proportional room for the graphic */
   }
 }
+
+/* Styling for the large callout text in the middle */
+.case-quote {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-style: italic;
+  font-weight: 300;
+  color: #ffffff; /* Gives it that bright white pop against the muted paragraphs */
+  line-height: 1.4;
+  margin: 2rem 0;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Formats the video container to look proportional and clean */
+.portfolio-video {
+  width: 100%;
+  max-width: 380px; /* Keeps the phone framework from becoming too large */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

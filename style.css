@@ -499,3 +499,33 @@ a {
   display: block;
   margin: 0 auto;
 }
+
+
+/* Container that places all 3 images in a row */
+.image-trio {
+  display: flex;
+  flex-direction: column; /* Stacks vertically on small mobile screens */
+  gap: 1.5rem;            /* Space between each image */
+  width: 100%;
+  margin: 2.5rem 0;
+}
+
+/* Formats each image to scale proportionally */
+.image-trio img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;    /* Optional rounded corners */
+}
+
+/* Desktop & Tablet View: Places all 3 side-by-side */
+@media (min-width: 768px) {
+  .image-trio {
+    flex-direction: row;  /* Places images in a horizontal row */
+  }
+
+  .image-trio img {
+    flex: 1;              /* Gives each image an equal 1/3 width share */
+    width: 0;             /* Prevents images from pushing past container bounds */
+  }
+}

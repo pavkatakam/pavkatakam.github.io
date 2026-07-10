@@ -95,7 +95,7 @@
         <h2>02. METHODS</h2>
         <h3>Replication</h3>
         <p>
-          We plan to replicate the study on the <a href="https://drive.google.com/file/d/18chfbzdctDWea-5dUSN4j0_48AHKkIrB/view?usp=sharing" target="_blank">optimal predictions in everyday cognition</a>, by changing the study to relate more to current society. 
+          We plan to replicate the study on the <a href="https://drive.google.com/file/d/18chfbzdctDWea-5dUSN4j0_48AHKkIrB/view?usp=sharing" target="_blank" style="text-decoration: underline;">optimal predictions in everyday cognition</a>, by changing the study to relate more to current society. 
           Out of the 9 topics tested, we decided to test our participants on total movie grosses and movie runtimes, topics we believed our participants would have some sort of prior knowledge on. 
           In addition, we also only tested 3 values of anchors instead of 5 as our study was replicated on a smaller scale. 
         </p>
@@ -109,83 +109,27 @@
         <br>
         <h3>Questions</h3>
         <p>
-          Through observation, we noticed that many of the game features of <b>Pikmin Bloom</b> (plucking petals and tapping small icons) require high-frequency, high-precision motor skills.
+          ADD PICTURES
         </p>
       </div>
     </section>
 
-<section class="split-block" style="align-items: center;">
+<section>
   <!-- Left Column: Content and Quote -->
-  <div class="split-text">
-    <h2>03. PROTOTYPES</h2>
-    <br>
-    <p style="color: #6b7280;">
-      Currently, Pikmin Bloom only has an integration for wheelchair users, which is limited to Apple Watch users (where one push equals 0.5 steps). This leads to leaving Android users and those without wearable tech excluded.
-    </p>
+  <div class="content-block">
+    <h2>03. RESULTS</h2>
+
+    <section class="case-image-container">
+      <img src="before1.png" alt="Before and After of Pikmin Bloom Home Screen" class="case-main-img" />
+    </section>
     
-    <h3>
-      ...since I walk slower than a 'normal' pace, the app doesn't always track my steps accurately... - 'C'
-    </h3>
-    <br>
-    <p>
-      We decided to integrate <b>distance-based tracking</b>, as this will allow people with different mobility limitations to be able to have their exercise tracked accurately. A tool that can accurately track movement for everyone helps improve experiences for not only walkers or wheelchair users, but also runners and hikers, proving that designing for the few can improve the experience for many.
-    </p>
-  </div>
-
-  <!-- Right Column: Phone Video Graphic -->
-  <div class="split-image">
-    <!-- 
-      autoplay: starts the video automatically
-      loop: makes it repeat infinitely
-      muted: required by modern browsers to allow autoplay
-      playsinline: keeps it from opening full-screen on mobile phones
-    -->
-    <video autoplay loop muted playsinline class="portfolio-video">
-      <source src="distance tracking.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</section>
-
-    
-<section class="split-block" style="align-items: center;">
-  <!-- Left Column: Phone Video Graphic -->
-  <div class="split-image">
-    <!-- 
-      autoplay: starts the video automatically
-      loop: makes it repeat infinitely
-      muted: required by modern browsers to allow autoplay
-      playsinline: keeps it from opening full-screen on mobile phones
-    -->
-    <video autoplay loop muted playsinline class="portfolio-video">
-      <source src="feeding.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <!-- Right Column: Content and Quote -->
-  <div class="split-text">
-    <br>
-    <p style="color: #6b7280;">
-      In addition, Pikmin Bloom’s current game structure requires specific tapping and dragging of objects, sometimes leading to a considerable amount of mis-taps. For example, nectar is fed to pikmin in order to increase their maturity to the flower stage. The original game play requires users to individually drag nectar in order to feed their pikmin. 
-    </p>
-    
-    <h3>
-      …feeding my pikmin can cause the app to lag and sometimes the nectar doesn't drag to the pikmin I want it to go to… - 'C'
-    </h3>
-    <br>
-    <p>
-      We decided to create larger create larger interaction areas, specifically a “bulk feed” button for feeding nectar to pikmin. In the new game play, users will be able to choose which type of nectar to feed their pikmin and the amount.
-    </p>
-  </div>
-</section>
-
-    <section>
-      <div class="content-block">
-        <h2>04. TESTING</h2>
-        <h3>We asked current Pikmin Bloom users to give us feedback...</h3>
+    <h3>Data Distributions</h3>
         <p>
-          We first tested our prototypes by asking users to find common game features from our newly redesigned home screen. Our users were able to easily find these features, leading to questions about the general layout and UI of the homescreen.
+          Our dataset contains a collection of 1 million movies from the TMDB database up to 2024. 
+          Based on the given data, the two graphs show the empirical distribution of both movie runtimes and movie gross values. 
+          From the graphs, the movie gross distribution seems to be right skewed, with the majority of the data centered around 0 to 1 million dollars. 
+          On the other hand, the movie runtime distribution seems to be normally distributed but slightly right skewed. 
+          Based on the dataset and the graphs, the average runtime seems to be around 90 to 110 minutes. 
         </p>
         <br>
 
@@ -193,32 +137,47 @@
       <img src="before1.png" alt="Before and After of Pikmin Bloom Home Screen" class="case-main-img" />
     </section>
         
-        <h3>A new feature...</h3>
+        <h3>Response Distributions</h3>
         <p>
-          During user testing, one of our participants brought up the idea of <b>selective feeding.</b> The underlying issue with the original game’s feeding mechanic was that it required players to hold and drag their finger to feed multiple Pikmin. We decided to follow the game’s pre-existing conventions for multi-selection screens to allow the user to select which specific Pikmin to feed.
+          After receiving our responses and cleaning up our data, we created dot plots to match what Griffiths and Tenenbaum created for their study. 
+          We placed our given anchor values on the x-axis (30, 80, 110 for movie runtimes and 1, 10, 100 for movie gross values), and our participants' predicted values on the y-axis, as well as the median values for each anchor in red.
         </p>
         <br>
+        <p>*code written in Python</p>
+</section>
 
-    <section class="case-image-container">
-      <img src="before2.png" alt="Before and After of Feeding Interaction" class="case-main-img" />
-    </section>
+    <section>
+      <div class="content-block">
+        <h2>04. DISCUSSION</h2>
+        <h3>Movie Grosses</h3>
+        <p>
+          Our participants' responses suggested a skew toward higher values, whereas the actual TMDB dataset and the original paper's power-law prior showed a heavy skew toward low values (0–1 million dollars). 
+          We believe that our participants might have an <b>"availability bias."</b> 
+          The high values that the participants received leads us to believe that the majority of our participants only remembered high-grossing movies rather than the many low-earning films found in the TMDB dataset.
+        </p>
+        <br>
+        <h3>Movie Durations</h3>
+        <p>
+          Our findings suggest that human predictions for movie durations are <b>consistent with Bayesian principles</b>, as participants successfully used their prior knowledge of typical movie lengths with specific anchors to make realistic guesses. 
+          While individual predictions varied, the group medians tracked the optimal statistical "shape.” 
+          The median predictions remained slightly above the y=x line, showing that participants correctly used a Gaussian prior to adjust their guesses toward the typical mean.
+        </p>
       </div>
 
       <div class="content-block">
-        <h2>05. REFLECTION</h2>
+        <h2>05. LIMITATIONS</h2>
+        <h3>Sample Size</h3>
         <p>
-          Overall, this project helped me transition from basic UI knowledge to a <b>production-ready Figma workflow,</b> teaching me how to analyze and replicate an established company's design system.
+          The biggest limitation of our study was our sample size of <b>31 participants.</b> 
+          From these participants, the majority of our participants were in the 19–22 age range, leading us to <b>not being able to generalize these results to the broader population.</b> 
+          A larger, more diverse sample would be required to determine if the overestimation in movie grosses and accurate estimation of movie runtimes stays consistent across different age groups.
         </p>
         <br>
-        <h3>What I learned...</h3>
-        <ol style="list-style-type: circle; color: #6b7280; padding-left: 30px;">
-           <li><b>User research + testing:</b> While my experience with interviews and data collection translated well for this project, I also learned more about specific tasks needed for user research and testing. </li>
-           <li><b>Figma prototyping:</b> Designing a Figma screen might be doable with minimal experience, but prototyping screens to transition between multiple screens was definitely a learning curve. </li>
-        </ol>
-        <br>
-        <h3>With more time...</h3>
+        <h3>Generalization</h3>
         <p>
-          I would love to work on this project with a different set of individuals: <b>non-Pikmin Bloom users.</b> We designed our project to be accessible for everyone, but with more user testing, we hope to make the interface intuitive for new users as well. 
+          While we cannot firmly conclude that the <b>Bayesian Decision Theory</b> and the <b>anchoring heuristic</b> exclusively control <b>real world decision making</b>, 
+          we understand that the significance of these findings goes beyond the world of media and entertainment towards critical real-world domains such as medical prognosis and emergency response. 
+          If human intuition is actually statistically valid, it implies that we possess an unconscious ability to make decisions by tracking environmental statistics. 
         </p>
       </div>
     </section> 

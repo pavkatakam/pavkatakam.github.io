@@ -434,3 +434,47 @@ a {
   color: var(--text-muted);
   line-height: 1.7;
 }
+
+/* Container holding both text and image side-by-side */
+.split-block {
+  display: flex;
+  flex-direction: column; /* Stack vertically on small mobile screens */
+  gap: 2.5rem;            /* Spacing between the text and the image */
+  align-items: center;    /* Keeps everything centered vertically */
+  margin-bottom: 4rem;
+}
+
+/* Text layout spacing */
+.split-text h3 {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.split-text p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Image scaling constraints */
+.split-image img {
+  width: 100%;
+  max-width: 450px;       /* Keeps the image from bloating too large */
+  height: auto;
+  display: block;
+}
+
+/* Desktop Breakpoint: Converts to side-by-side view automatically */
+@media (min-width: 768px) {
+  .split-block {
+    flex-direction: row;  /* Places them in a clean horizontal row */
+  }
+  
+  .split-text {
+    flex: 1.2;            /* Gives the text side slightly more weight/space */
+  }
+  
+  .split-image {
+    flex: 1;              /* Allocates proportional room for the graphic */
+  }
+}

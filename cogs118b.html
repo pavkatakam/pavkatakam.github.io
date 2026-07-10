@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comparison of Left/Right Facing Cars with K-means clustering — Pavani Katakam</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation (Consistent with Home) -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">PAVANI KATAKAM</a>
+      <nav class="nav-links">
+        <a href="index.html#projects">Work</a>
+        <a href="index.html#about">About</a>
+        <a href="resume.pdf" target="_blank" class="nav-btn">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Back Button -->
+    <div class="back-link-wrapper">
+      <a href="index.html#projects" class="back-link">&larr; Back to Projects</a>
+    </div>
+
+    <!-- Case Study Hero -->
+    <header class="case-study-hero">
+      <span class="project-category">COGS 118B // INTRODUCTION INTO MACHINE LEARNING</span>
+      <h1 class="case-title">Comparison of Left/Right Facing Cars with K-means clustering</h1>
+    </header>
+
+    <!-- Project Overview Metrics Grid -->
+    <section class="project-meta-grid">
+      <div class="meta-item">
+        <h4>Role</h4>
+        <p>Data Analyst, Researcher, & Coder</p>
+      </div>
+      <div class="meta-item">
+        <h4>Timeline</h4>
+        <p>September 2025 - December 2025</p>
+      </div>
+      <div class="meta-item">
+        <h4>Teammates</h4>
+        <p>Christopher Arias and Zach Ishida</p>
+      </div>
+    </section>
+
+
+
+<section class="split-block">
+  <!-- Left Side: The Narrative Text -->
+  <div class="split-text">
+    <h2>01. BACKGROUND</h2>
+    <h3>AI Algorithms</h3>
+    <p>
+      Within the world of <b>image classification</b>, there are numerous AI algorithms being used to differentiate objects in digital images and classify them. 
+      Tools like <b>PCA, CLIP, and K-means</b> are very popular, all being used in our project today: <b>comparing left and right facing car images</b> to see if different AI algorithms can successfully differentiate between them. 
+    </p>
+    <h3>3 Comparisons</h3>
+    <p>
+      Overall, we are going to compare the results of <b>K-means clustering</b> when applied to different sets of features. 
+      We will use K-means <b>directly on the CLIP features</b> and K-means on the <b>PCA features using the optimal k (10).</b> 
+      We will also use K-means on the <b>first 2 principal components</b> to test how much information is lost by reduction.
+    </p>
+    <h3>Research Interest</h3>
+  </div>
+
+  <!-- Right Side: The Graphic Image -->
+  <div class="split-image">
+    <img src="cars.png" alt="Cars Graphic" />
+  </div>
+</section>
+
+    <section>
+      <div class="content-block">
+        <h2>02. METHODS</h2>
+        <h3>Replication</h3>
+        <p>
+          We plan to replicate the study on the <a href="https://drive.google.com/file/d/18chfbzdctDWea-5dUSN4j0_48AHKkIrB/view?usp=sharing" target="_blank" style="text-decoration: underline;">optimal predictions in everyday cognition</a>, by changing the study to relate more to current society. 
+          Out of the 9 topics tested, we decided to test our participants on total movie grosses and movie runtimes, topics we believed our participants would have some sort of prior knowledge on. 
+          In addition, we also only tested 3 values of anchors instead of 5 as our study was replicated on a smaller scale. 
+        </p>
+        <br>
+        <h3>Participants</h3>
+        <p>
+          We were able to get a total of <b>31 responses</b> from our friends and family. 
+          Our participants mostly consist of a younger crowd, 19-22 years old with some 30+ year old outliers. 
+          Every participant filled out a Google form, beginning with an initial unbiased question choosing a number 1-3, a number which determined which anchors they would be making their decisions on. 
+        </p>
+        <br>
+        <h3>Questions</h3>
+        <div class="image-trio">
+            <img src="q1.png" alt="Question 1" />
+            <img src="q2.png" alt="Question 2" />
+            <img src="q3.png" alt="Question 3" />
+        </div>
+      </div>
+    </section>
+
+<section>
+  <!-- Left Column: Content and Quote -->
+  <div class="content-block">
+    <h2>03. RESULTS</h2>
+
+    <section class="case-image-container">
+      <img src="data distributions.png" alt="Data Distributions" class="case-main-img" />
+    </section>
+    
+    <h3>Data Distributions</h3>
+        <p>
+          Our <a href="https://www.kaggle.com/datasets/asaniczka/tmdb-movies-dataset-2023-930k-movies/data" target="_blank" style="text-decoration: underline;">dataset</a> contains a collection of 1 million movies from the TMDB database up to 2024. 
+          Based on the given data, the two graphs show the empirical distribution of both movie runtimes and movie gross values. 
+          From the graphs, the movie gross distribution seems to be right skewed, with the majority of the data centered around 0 to 1 million dollars. 
+          On the other hand, the movie runtime distribution seems to be normally distributed but slightly right skewed. 
+          Based on the dataset and the graphs, the average runtime seems to be around 90 to 110 minutes. 
+        </p>
+
+    <section class="case-image-container">
+      <div class="image-duo">
+            <img src="movieG.png" alt="Movie Gross Value Response Distributions" />
+            <img src="movieR.png" alt="Movie Runtime Response Distributions" />
+        </div>
+    </section>
+        
+        <h3>K-means Clusters on 2D PCA Features</h3>
+        <p>
+          We noticed that the yellow and purple clusters represent the 2 different directions our dataset of car images were facing. 
+          Since the clusters are very separate, this shows that the left/right direction is <b>very strong</b> in the CLIP features. 
+          The accuracy of 68.94% is very high, but the scatter plot with <b>2 different purple clusters</b> shows where the 31.06% of errors occurred.
+        </p>
+</section>
+
+    <section>
+      <div class="content-block">
+        <h2>04. CONCLUSION</h2>
+        <h3>Findings</h3>
+        <p>
+          Overall, we learned that CLIP embeddings and feature extraction are <b>useful</b> when looking at visual features like a car angles. 
+          We also learned that PCA is useful at looking at CLIP features and analyzing the principal components. 
+          In addition, PCA also taught us that the <b>number of components used isn’t really important</b>, since 2 components and 10 components gave the same results. 
+        </p>
+        <br>
+        <h3>Expansion</h3>
+        <p>
+          In the future, we could have extended our project by <b>using the CLIP embeddings for text.</b> 
+          For this project, we only used the CLIP embeddings for images, but if we were able to use text, it could have improved the accuracy of our model.
+        </p>
+      </div>
+    </section> 
+  </main>
+
+  <!-- Footer (Consistent with Home) -->
+  <footer class="footer">
+    <div class="footer-container">
+      <h3>Let's Connect!</h3>
+      <p>Interested in collaborating on UX design or machine learning projects?</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/pavani-katakam/" target="_blank">LinkedIn</a>
+        <a href="mailto:pavkatakam@gmail.com">Email</a>
+      </div>
+      <p class="copyright">© 2026 Pavani Katakam. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

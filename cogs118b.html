@@ -80,52 +80,40 @@
     <section>
       <div class="content-block">
         <h2>02. METHODS</h2>
-        <h3>Replication</h3>
+        <h3>Dataset</h3>
         <p>
-          We plan to replicate the study on the <a href="https://drive.google.com/file/d/18chfbzdctDWea-5dUSN4j0_48AHKkIrB/view?usp=sharing" target="_blank" style="text-decoration: underline;">optimal predictions in everyday cognition</a>, by changing the study to relate more to current society. 
-          Out of the 9 topics tested, we decided to test our participants on total movie grosses and movie runtimes, topics we believed our participants would have some sort of prior knowledge on. 
-          In addition, we also only tested 3 values of anchors instead of 5 as our study was replicated on a smaller scale. 
+          We downloaded the <a href="https://deepvisualmarketing.github.io/" target="_blank" style="text-decoration: underline;">resized DVM file</a>, which has 84 different folders of different car brands (sorted by year and color) with images of the <b>cars facing different angles.</b> 
+          Using a random number generator, we chose 4 of them: <b>Ferrari, Lotus, McLaren, and Rolls-Royce.</b> 
+          This file also had an image table with image IDs, the predicted angle of the car in the image, and many more.
         </p>
         <br>
-        <h3>Participants</h3>
+        <h3>Code</h3>
         <p>
-          We were able to get a total of <b>31 responses</b> from our friends and family. 
-          Our participants mostly consist of a younger crowd, 19-22 years old with some 30+ year old outliers. 
-          Every participant filled out a Google form, beginning with an initial unbiased question choosing a number 1-3, a number which determined which anchors they would be making their decisions on. 
+          From the <a href="https://drive.google.com/file/d/10DlqgTHuzOyEbdVXO-QDlEUfQKGKUBuy/view?usp=sharing" target="_blank" style="text-decoration: underline;">CLIP_THINGS code</a>, we ran the first 3 sections of code to use <b>CLIP embeddings.</b> 
+          After downloading the image_table.csv file, we cleaned the file to use the selected 4 brands and the left & right facing cars. 
+          The image table file had a unique image name for each image, so we had to make sure that each part of the image name was used when calling the images. 
         </p>
         <br>
-        <h3>Questions</h3>
-        <div class="image-trio">
-            <img src="q1.png" alt="Question 1" />
-            <img src="q2.png" alt="Question 2" />
-            <img src="q3.png" alt="Question 3" />
-        </div>
+        <p>
+          After cleaning the dataset, we used <b>feature extraction</b> to convert all our car images into a format that PCA and K-means can understand. 
+          Since we are using K-means for our project, we also found the <b>ground-truth labels</b> for this algorithm and used PCA for <b>10 components and 2 components.</b>
+        </p>
       </div>
     </section>
 
 <section>
   <!-- Left Column: Content and Quote -->
   <div class="content-block">
-    <h2>03. RESULTS</h2>
-
-    <section class="case-image-container">
-      <img src="data distributions.png" alt="Data Distributions" class="case-main-img" />
-    </section>
-    
-    <h3>Data Distributions</h3>
+    <h2>03. DISCUSSION</h2>
+    <h3>Project Results: Accuracy Comparison</h3>
         <p>
-          Our <a href="https://www.kaggle.com/datasets/asaniczka/tmdb-movies-dataset-2023-930k-movies/data" target="_blank" style="text-decoration: underline;">dataset</a> contains a collection of 1 million movies from the TMDB database up to 2024. 
-          Based on the given data, the two graphs show the empirical distribution of both movie runtimes and movie gross values. 
-          From the graphs, the movie gross distribution seems to be right skewed, with the majority of the data centered around 0 to 1 million dollars. 
-          On the other hand, the movie runtime distribution seems to be normally distributed but slightly right skewed. 
-          Based on the dataset and the graphs, the average runtime seems to be around 90 to 110 minutes. 
+          All of the <b>accuracies are the same</b>, meaning that a car's left or right direction is prominent to the model. 
+          Theoretically, this means that the left/right classes are captured <b>almost entirely by the very first few principal components.</b> 
+          However, all 3 of the algorithms having the same accuracy could also be a sign that our model didn’t work as well as we thought.
         </p>
 
     <section class="case-image-container">
-      <div class="image-duo">
-            <img src="movieG.png" alt="Movie Gross Value Response Distributions" />
-            <img src="movieR.png" alt="Movie Runtime Response Distributions" />
-        </div>
+      <img src="clip.png" alt="Graph of K-means Clusters on 2D PCA Features" class="case-main-img" />
     </section>
         
         <h3>K-means Clusters on 2D PCA Features</h3>

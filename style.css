@@ -560,7 +560,7 @@ a {
 }
 
 .chart-container {
-  max-width: 500px; /* Adjust this value to make it smaller or larger */
+  max-width: 400px; /* Adjust this value to make it smaller or larger */
   width: 100%;
   margin: 2rem auto; /* Centers the chart box */
   text-align: center;

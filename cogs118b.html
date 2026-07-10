@@ -105,6 +105,12 @@
   <div class="content-block">
     <h2>03. DISCUSSION</h2>
     <h3>Project Results: Accuracy Comparison</h3>
+        <ol style="list-style-type: circle; color: #6b7280; padding-left: 30px;">
+           <li>Accuracy (K-means on Full CLIP, D=1024): 68.94%</li>
+           <li>Accuracy (K-means on PCA Features, D=10): 68.94%</li>
+           <li>3. Accuracy (K-means on PCA Features, D=2): 68.94%</li>
+        </ol>
+    <br>
         <p>
           All of the <b>accuracies are the same</b>, meaning that a car's left or right direction is prominent to the model. 
           Theoretically, this means that the left/right classes are captured <b>almost entirely by the very first few principal components.</b> 

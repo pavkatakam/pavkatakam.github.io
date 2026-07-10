@@ -319,3 +319,118 @@ a {
   font-size: 0.85rem;
   color: var(--text-muted);
 }
+
+/* ==========================================================================
+   Case Study Page Styles
+   ========================================================================== */
+
+.back-link-wrapper {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  font-weight: 500;
+  color: var(--accent-color);
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
+
+.case-study-hero {
+  margin-bottom: 3rem;
+}
+
+.project-category {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent-color);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.case-title {
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  line-height: 1.15;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.case-subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: var(--text-muted);
+  max-width: 800px;
+}
+
+/* Responsive Overview Info Grid */
+.project-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 640px) {
+  .project-meta-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.meta-item h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.meta-item p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+/* Project Images */
+.case-image-container {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.case-main-img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  display: block;
+}
+
+/* Narrative Body Text Content */
+.case-content {
+  max-width: 720px;
+  margin: 0 auto 5rem auto;
+}
+
+.content-block {
+  margin-bottom: 3.5rem;
+}
+
+.content-block h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.content-block p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}

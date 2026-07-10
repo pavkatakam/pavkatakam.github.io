@@ -494,7 +494,7 @@ a {
 /* Formats the video container to look proportional and clean */
 .portfolio-video {
   width: 100%;
-  max-width: 380px; /* Keeps the phone framework from becoming too large */
+  max-width: 280px; /* Change this from 380px to 280px to make it smaller */
   height: auto;
   display: block;
   margin: 0 auto;

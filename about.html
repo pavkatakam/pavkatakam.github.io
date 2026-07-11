@@ -1,4 +1,45 @@
- <section id="about" class="about-section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pavani Katakam — UX Designer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">PAVANI KATAKAM</a>
+      <nav class="nav-links">
+        <a href="#about.html">About</a>
+        <a href="resume.pdf" target="_blank" class="nav-btn">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="greeting">Hi, I'm Pavani 👋</h1>
+        <p class="role-title">UX/UI Designer & Cognitive Science Student</p>
+        <p class="tagline">
+          Connecting intuitive human-centered design to AI algorithms and machine learning frameworks.
+        </p>
+        <div class="education-badge">
+          <span>EDUCATION</span>
+          <p>B.S. in Cognitive Science (Machine Learning & Neural Computation) @ UC San Diego</p>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="profile.jpeg" alt="Pavani Katakam Profile" />
+      </div>
+    </section>
+
+
+    <section id="about" class="about-section">
       <h2>About & Experience</h2>
       <p class="about-bio">
         Hello! I'm Pavani, a Cognitive Science student specialized in machine learning and neural computation. I blend user research and data-driven insights to build intuitive digital interfaces.
@@ -18,3 +59,35 @@
         </div>
       </div>
     </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <h3>Available for UX/UI Design and Data Analysis opportunities.</h3>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/pavani-katakam/" target="_blank">LinkedIn</a>
+        <a href="mailto:pavkatakam@gmail.com">Email</a>
+      </div>
+      <p class="copyright">© 2026 Pavani Katakam. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple filter functionality for projects
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.pill');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

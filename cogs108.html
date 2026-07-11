@@ -75,30 +75,42 @@
 
   <!-- Right Side: The Graphic Image -->
   <div class="split-image">
-    <img src="cars.png" alt="Cars Graphic" />
+    <img src="ev.png" alt="Cars Graphic" />
   </div>
 </section>
 
     <section>
       <div class="content-block">
         <h2>02. DISTRIBUTIONS</h2>
-        <h3>Dataset</h3>
+        <h3>Datasets</h3>
         <p>
-          We downloaded the <a href="https://deepvisualmarketing.github.io/" target="_blank" style="text-decoration: underline;">resized DVM file</a>, which has 84 different folders of different car brands (sorted by year and color) with images of the <b>cars facing different angles.</b> 
-          Using a random number generator, we chose 4 of them: <b>Ferrari, Lotus, McLaren, and Rolls-Royce.</b> 
-          This file also had an image table with image IDs, the predicted angle of the car in the image, and many more.
+          <a href="https://drive.google.com/file/d/10DlqgTHuzOyEbdVXO-QDlEUfQKGKUBuy/view?usp=sharing" target="_blank" style="text-decoration: underline;">CLIP_THINGS code</a>
         </p>
         <br>
-        <h3>Code</h3>
+        <h3>Total Registered Vehicles vs. Newly Registered ZEVs by County</h3>
         <p>
-          From the <a href="https://drive.google.com/file/d/10DlqgTHuzOyEbdVXO-QDlEUfQKGKUBuy/view?usp=sharing" target="_blank" style="text-decoration: underline;">CLIP_THINGS code</a>, we ran the first 3 sections of code to use <b>CLIP embeddings.</b> 
-          After downloading the image_table.csv file, we cleaned the file to use the selected 4 brands and the left & right facing cars. 
-          The image table file had a unique image name for each image, so we had to make sure that each part of the image name was used when calling the images. 
+          Counties with <b>larger populations</b> have the highest total vehicle registrations. 
+          <b>Los Angeles County</b> has the highest number of total registered vehicles, but its ZEV adoption rate is not the highest. 
+          On the other hand, some counties with fewer total vehicles have a higher proportion of ZEV adoption.  
         </p>
         <br>
+        <h3>Proportion of Newly Registered ZEVs by County</h3>
         <p>
-          After cleaning the dataset, we used <b>feature extraction</b> to convert all our car images into a format that PCA and K-means can understand. 
-          Since we are using K-means for our project, we also found the <b>ground-truth labels</b> for this algorithm and used PCA for <b>10 components and 2 components.</b>
+          Based on this graph, Los Angeles, previously an outlier, has a lower ZEV proportion than expected. 
+          Now, San Mateo, Santa Clara, San Francisco, and Alameda have the <b>highest ZEV proportions.</b> 
+          With proportions ranging from <b>0.02% to 2%,</b> no extreme outliers exist, suggesting ZEV numbers scale with total vehicles.
+        </p>
+        <br>
+        <h3>Average Household Income by County</h3>
+        <p>
+          This income distribution graph <b>closely resembles</b> the ZEV proportion graph rather than total vehicle registrations, meaning that there are income disparities across California counties. 
+          This suggests that <b>wealthier counties tend to have higher EV adoption.</b>
+        </p>
+        <br>
+        <h3>Average Household Income vs. Proportion of Newly Registered ZEVs</h3>
+        <p>
+          The graph visually suggests a strong linear correlation <b>(r = 0.89)</b> between the two variables. 
+          Most counties cluster at lower income levels with low ZEV adoption. Higher-income counties account for <b>most</b> ZEV registrations.
         </p>
       </div>
     </section>
@@ -107,12 +119,13 @@
   <!-- Left Column: Content and Quote -->
   <div class="content-block">
     <h2>03. DISCUSSION</h2>
-    <h3>Key Findings/h3>
+    <h3>Key Findings</h3>
         <p>
           Findings suggest a <b>strong positive correlation</b> between income and ZEV adoption. 
           Wealthier counties, particularly in the Bay Area, tend to have more ZEVs, leading us to believe that ownership could be emerging as a <b>status symbol tied to wealth.</b> 
           State incentives, infrastructure, and policy may also contribute to adoption rates. However, ZEVs still make up a <b>small share of total vehicles.</b>
         </p>
+    <br>
         <h3>Policy Considerations</h3>
         <p>
           ZEVs remain <b>out of reach</b> for many lower-income communities. 

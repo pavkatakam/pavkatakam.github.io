@@ -72,6 +72,7 @@
 
   <!-- Right Side: The Graphic Image -->
   <div class="split-text">
+    <h2>  </h2>
     <h3>Logisitic Regression</h3>
     <p>
     Logistic regression analyzes relationships between independent variables and a categorical outcome, distinguishing itself from linear regression, which predicts continuous values. 
@@ -84,48 +85,12 @@
       By tuning parameters such as node size, total tree count, and sampled features, the algorithm effectively handles both classification and regression tasks. 
       This combined approach reduces prediction variance across the forest to deliver more robust overall outputs.
     </p>
-  </div>
-</section>
-
-    <section class="split-block">
-  <!-- Left Side: The Narrative Text -->
-  <div class="split-text">
-    <h2>01. ALGORITHMS</h2>
-    <h3>KNN (K-nearest neighbors)</h3>
-    <p>
-      K-Nearest Neighbors (KNN) makes a prediction on an unseen data point by analyzing the proximity and labels of its neighboring instances within the dataset.
-      The applications of KNN are mainly within classification, from recommendation engines to pattern recognition. 
-      However, while KNN is easy to implement and adaptable, it doesn’t perform well with high-dimensional data and is prone to over-fitting the dataset.      
-    </p>
-    <h3>Decision Tree</h3>
-    <p>
-      Decision trees organize data into a hierarchical framework composed of root, internal, and leaf nodes to evaluate inputs and determine final outcomes. 
-      While tree complexity dictates how data points are subsetted, larger datasets face a heightened risk of overfitting compared to smaller ones. 
-      Despite this drawback, decision trees remain widely used because they are straightforward to interpret and demand minimal data preparation.
-    </p>
-    <h3>Logisitic Regression</h3>
-    <p>
-    Logistic regression analyzes relationships between independent variables and a categorical outcome, distinguishing itself from linear regression, which predicts continuous values. 
-      Depending on the dependent variable, models are categorized as binary for two outcomes, multinomial for three or more unordered outcomes, or ordinal for ordered categories. 
-      This framework allows the algorithm to effectively predict the likelihood of specific categorical results occurring.
-    </p>
-    <h3>Random Forest</h3>
-    <p>
-      Random forest relies on bagging—a technique that trains independent models on random, bootstrapped data samples—to build an ensemble of decision trees. 
-      By tuning parameters such as node size, total tree count, and sampled features, the algorithm effectively handles both classification and regression tasks. 
-      This combined approach reduces prediction variance across the forest to deliver more robust overall outputs.
-    </p>
-  </div>
-
-  <!-- Right Side: The Graphic Image -->
-  <div class="split-image">
-    <img src="brain.png" alt="Brain Graphic" />
   </div>
 </section>
 
     <section>
       <div class="content-block">
-        <h2>03. DATASETS</h2>
+        <h2>02. DATASETS</h2>
         <h3>Heart Disease</h3>
         <p>
           We downloaded the <a href="https://deepvisualmarketing.github.io/" target="_blank" style="text-decoration: underline;">resized DVM file</a>, which has 84 different folders of different car brands (sorted by year and color) with images of the <b>cars facing different angles.</b> 
@@ -139,10 +104,16 @@
           After downloading the image_table.csv file, we cleaned the file to use the selected 4 brands and the left & right facing cars. 
           The image table file had a unique image name for each image, so we had to make sure that each part of the image name was used when calling the images. 
         </p>
+        <br>
         <h3>Iris</h3>
         <p>
           After cleaning the dataset, we used <b>feature extraction</b> to convert all our car images into a format that PCA and K-means can understand. 
           Since we are using K-means for our project, we also found the <b>ground-truth labels</b> for this algorithm and used PCA for <b>10 components and 2 components.</b>
+        </p>
+        <br>
+        <p> 
+        Note: Since each dataset has to also be trained with different partitions, we will show the standard 50/50 partition for all of the algorithms, but all of the values will be listed below. 
+          (To change the partitions, we change the test size to 0.8 for 20/80 and to 0.2 for 80/20.)
         </p>
       </div>
     </section>
@@ -150,7 +121,7 @@
 <section>
   <!-- Left Column: Content and Quote -->
   <div class="content-block">
-    <h2>04. DISCUSSION</h2>
+    <h2>03. DISCUSSION</h2>
     <h3>Project Results: Accuracy Comparison</h3>
         <ol style="list-style-type: circle; color: #6b7280; padding-left: 30px;">
            <li>Accuracy (K-means on Full CLIP, D=1024): 68.94%</li>

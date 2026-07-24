@@ -41,6 +41,10 @@
         <p>Data Analyst, Researcher, & Coder</p>
       </div>
       <div class="meta-item">
+        <h4>Research Question</h4>
+        <p>How do supervised machine learning algorithms compare in classification accuracy across varying dataset characteristics and train-test data split ratios?</p>
+      </div>
+      <div class="meta-item">
         <h4>Timeline</h4>
         <p>September 2025 - December 2025</p>
       </div>
@@ -51,13 +55,25 @@
 <section class="split-block">
   <!-- Left Side: The Narrative Text -->
   <div class="split-text">
-    <h2>01. BACKGROUND</h2>
-    <h3>AI Algorithms</h3>
+    <h2>01. ALGORITHMS</h2>
+    <h3>KNN (K-nearest neighbors)</h3>
     <p>
       Within the world of <b>image classification</b>, there are numerous AI algorithms being used to differentiate objects in digital images and classify them. 
       Tools like <b>PCA, CLIP, and K-means</b> are very popular, all being used in our project today: <b>comparing left and right facing car images</b> to see if different AI algorithms can successfully differentiate between them. 
     </p>
-    <h3>3 Comparisons</h3>
+    <h3>Decision Tree</h3>
+    <p>
+      Overall, we are going to compare the results of <b>K-means clustering</b> when applied to different sets of features. 
+      We will use K-means <b>directly on the CLIP features</b> and K-means on the <b>PCA features using the optimal k (10).</b> 
+      We will also use K-means on the <b>first 2 principal components</b> to test how much information is lost by reduction.
+    </p>
+    <h3>Logisitic Regression</h3>
+    <p>
+      Overall, we are going to compare the results of <b>K-means clustering</b> when applied to different sets of features. 
+      We will use K-means <b>directly on the CLIP features</b> and K-means on the <b>PCA features using the optimal k (10).</b> 
+      We will also use K-means on the <b>first 2 principal components</b> to test how much information is lost by reduction.
+    </p>
+    <h3>Random Forest</h3>
     <p>
       Overall, we are going to compare the results of <b>K-means clustering</b> when applied to different sets of features. 
       We will use K-means <b>directly on the CLIP features</b> and K-means on the <b>PCA features using the optimal k (10).</b> 
@@ -67,13 +83,13 @@
 
   <!-- Right Side: The Graphic Image -->
   <div class="split-image">
-    <img src="cars.png" alt="Cars Graphic" />
+    <img src="brain.png" alt="Brain Graphic" />
   </div>
 </section>
 
     <section>
       <div class="content-block">
-        <h2>02. METHODS</h2>
+        <h2>02. EXPERIMENT</h2>
         <h3>Dataset</h3>
         <p>
           We downloaded the <a href="https://deepvisualmarketing.github.io/" target="_blank" style="text-decoration: underline;">resized DVM file</a>, which has 84 different folders of different car brands (sorted by year and color) with images of the <b>cars facing different angles.</b> 
@@ -124,24 +140,6 @@
           The accuracy of 68.94% is very high, but the scatter plot with <b>2 different purple clusters</b> shows where the 31.06% of errors occurred.
         </p>
 </section>
-
-    <section>
-      <div class="content-block">
-        <h2>04. CONCLUSION</h2>
-        <h3>Findings</h3>
-        <p>
-          Overall, we learned that CLIP embeddings and feature extraction are <b>useful</b> when looking at visual features like a car angles. 
-          We also learned that PCA is useful at looking at CLIP features and analyzing the principal components. 
-          In addition, PCA also taught us that the <b>number of components used isn’t really important</b>, since 2 components and 10 components gave the same results. 
-        </p>
-        <br>
-        <h3>Expansion</h3>
-        <p>
-          In the future, we could have extended our project by <b>using the CLIP embeddings for text.</b> 
-          For this project, we only used the CLIP embeddings for images, but if we were able to use text, it could have improved the accuracy of our model.
-        </p>
-      </div>
-    </section> 
   </main>
 
   <!-- Footer (Consistent with Home) -->

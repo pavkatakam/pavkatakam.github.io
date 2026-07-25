@@ -202,23 +202,13 @@
       </tbody>
     </table>
   </div>
+  
     <br>
         <p>
-          All of the <b>accuracies are the same</b>, meaning that a car's left or right direction is prominent to the model. 
-          Theoretically, this means that the left/right classes are captured <b>almost entirely by the very first few principal components.</b> 
-          However, all 3 of the algorithms having the same accuracy could also be a sign that our model didn’t work as well as we thought.
-        </p>
-
-    <p> <br> </p>
-    
-    <img src="clip.png" alt="K-means Clusters on 2D PCA Features" style="display: block; margin: 0 auto; max-width: 500px; width: 100%; height: auto;" />
-
-    <br>
-        <h3>K-means Clusters on 2D PCA Features</h3>
-        <p>
-          We noticed that the yellow and purple clusters represent the 2 different directions our dataset of car images were facing. 
-          Since the clusters are very separate, this shows that the left/right direction is <b>very strong</b> in the CLIP features. 
-          The accuracy of 68.94% is very high, but the scatter plot with <b>2 different purple clusters</b> shows where the 31.06% of errors occurred.
+          Overall, the machine learning algorithms yielded very high accuracy results from training and testing on 3 different datasets. 
+          Looking at only the 50/50 partition, KNN has the best accuracy for the heart disease and iris dataset, while random forests has the best accuracy for the student performance dataset. 
+          Looking at the 20/80 partition, KNN has the best accuracy for the heart disease dataset, while decision tree has the best accuracy for the iris and student performance dataset. 
+          Finally, looking at the 80/20 partition, KNN has the best accuracy for the heart disease dataset, logistic regression for the iris dataset, and decision tree for the student performance dataset.
         </p>
 </section>
   </main>

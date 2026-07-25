@@ -123,12 +123,85 @@
   <!-- Left Column: Content and Quote -->
   <div class="content-block">
     <h2>03. DISCUSSION</h2>
-    <h3>Project Results: Accuracy Comparison</h3>
-        <ol style="list-style-type: circle; color: #6b7280; padding-left: 30px;">
-           <li>Accuracy (K-means on Full CLIP, D=1024): 68.94%</li>
-           <li>Accuracy (K-means on PCA Features, D=10): 68.94%</li>
-           <li>3. Accuracy (K-means on PCA Features, D=2): 68.94%</li>
-        </ol>
+    <h3>Results</h3>
+    <table class="results-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>KNN</th>
+          <th>Decision Tree</th>
+          <th>Logistic Regression</th>
+          <th>Random Forest</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Heart 50/50 -->
+        <tr>
+          <td class="row-label">Heart 50/50</td>
+          <td>k = 3<br>accuracy = 0.8255</td>
+          <td>max depth = 2<br>accuracy = 0.7383</td>
+          <td>C = 0.0001<br>accuracy = 0.7987</td>
+          <td>max depth = 3<br>n_estimators = 150<br>accuracy = 0.8054</td>
+        </tr>
+        <!-- Heart 20/80 -->
+        <tr>
+          <td class="row-label">Heart 20/80</td>
+          <td>k = 17<br>accuracy = 0.8067</td>
+          <td>max depth = 4<br>accuracy = 0.7647</td>
+          <td>C = 0.0001<br>accuracy = 0.8025</td>
+          <td>max depth = 5<br>n_estimators = 50<br>accuracy = 0.7857</td>
+        </tr>
+        <!-- Heart 80/20 -->
+        <tr>
+          <td class="row-label">Heart 80/20</td>
+          <td>k = 15<br>accuracy = 0.8500</td>
+          <td>max depth = 3<br>accuracy = 0.7000</td>
+          <td>C = 1.0<br>accuracy = 0.8333</td>
+          <td>max depth = 3<br>n_estimators = 50<br>accuracy = 0.8167</td>
+        </tr>
+        <!-- Student 50/50 -->
+        <tr>
+          <td class="row-label">Student 50/50</td>
+          <td>k = 5<br>accuracy = 0.8554</td>
+          <td>max depth = 1<br>accuracy = 0.9323</td>
+          <td>C = 1.0<br>accuracy = 0.9046</td>
+          <td>max depth = 5<br>n_estimators = 50<br>accuracy = 0.9354</td>
+        </tr>
+        <!-- Student 20/80 -->
+        <tr>
+          <td class="row-label">Student 20/80</td>
+          <td>k = 11<br>accuracy = 0.8519</td>
+          <td>max depth = 1<br>accuracy = 0.9365</td>
+          <td>C = 10.0<br>accuracy = 0.8442</td>
+          <td>max depth = 5<br>n_estimators = 50<br>accuracy = 0.9269</td>
+        </tr>
+        <!-- Student 80/20 -->
+        <tr>
+          <td class="row-label">Student 80/20</td>
+          <td>k = 7<br>accuracy = 0.8308</td>
+          <td>max depth = 1<br>accuracy = 0.9462</td>
+          <td>C = 1.0<br>accuracy = 0.9077</td>
+          <td>max depth = 8<br>n_estimators = 150<br>accuracy = 0.9077</td>
+        </tr>
+        <!-- Iris 50/50 -->
+        <tr>
+          <td class="row-label">Iris 50/50</td>
+          <td>k = 7<br>accuracy = 0.9200</td>
+          <td>max depth = 1<br>accuracy = 0.8800</td>
+          <td>C = 0.1<br>accuracy = 0.8800</td>
+          <td>max depth = 3<br>n_estimators = 50<br>accuracy = 0.8800</td>
+        </tr>
+        <!-- Iris 20/80 -->
+        <tr>
+          <td class="row-label">Iris 20/80</td>
+          <td>k = 13<br>accuracy = 0.7750</td>
+          <td>max depth = 1<br>accuracy = 0.9000</td>
+          <td>C = 0.001<br>accuracy = 0.7875</td>
+          <td>max depth = 3<br>n_estimators = 50<br>accuracy = 0.8875</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
     <br>
         <p>
           All of the <b>accuracies are the same</b>, meaning that a car's left or right direction is prominent to the model. 
